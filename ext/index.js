@@ -14,6 +14,7 @@ try {
 	try {
 		bson = require('bindings')('bson.node');
 	} catch (err) {
+		console.log(err); // Show why it's not loading
 		throw new Error("js-bson: Failed to load c++ bson extension, using pure JS version");
 	}
 }
